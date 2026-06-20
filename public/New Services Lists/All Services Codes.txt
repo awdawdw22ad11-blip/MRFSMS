@@ -1,0 +1,915 @@
+WhatsApp	wa
+Facebook	fb
+Instagram	ig
+Snapchat	fu
+TikTok	lf
+Imo Messenger	im
+Tinder	oi
+Twitter / X	tw
+Amazon	am
+Alibaba	ab
+Careem	ls
+Spotify	alj
+OpenAI / ChatGPT	dr
+PayPal	ts
+AliExpress	hx
+WeChat	wb
+Viber	vi
+Uber	ub
+Microsoft	mm
+Signal	bw
+Easypay	rz
+Google / Gmail / YouTube	go
+Discord	ds
+Telegram	tg
+Line	me
+Steam	mt
+Netflix	nf
+Blizzard	bz
+Ebay	dh
+VK (mail.ru group)	vk
+Yahoo	mb
+Airbnb	uk
+Craigslist	wc
+Nike	ew
+Shopee	ka
+Jingdong	za
+Tencent QQ	qq
+Yalla	yl
+AOL	pm
+Deliveroo	zk
+Papara	zr
+Alipay	hw
+Adidas	an
+DiDi taxi	xk
+MiChat	mc
+Buff.163	bff
+Burger King	ip
+Cita Previa	si
+DANA	fr
+4FunLite	hk
+Grindr	yw
+Gojek	ni
+GroupMe	xs
+MyGLO	ae
+Humble bundle	un
+LightChat	xf
+KFC	fz
+Kaggle	zo
+McDonalds	ry
+OkCupid	vm
+OLX	sn
+Pgbonus	fx
+Paysafecard	jq
+Plenty of Fish	pf
+ProtonMail	dp
+Payoneer	nc
+32Red	qi
+Revolut	ij
+Scruff	scrf
+Switchere	tcw
+Stormgain	vj
+Twitch	hb
+Tilda	gr_tl
+Tokopedia	xd
+TradingView	gc
+YoHo	YoHo
+Zhihu	qy
+Weibo	kf
+Apple	wx
+Vinted	kc
+LinkedIn	tn
+Bigo Live	bl
+Skype	rc
+Dundle	fi
+Hinge	vz
+TanTan	wh
+Getir	ul
+Monese	py
+Bitclout	lt
+Bolt	tx
+Gett	gt
+Hezzl	ss
+Lazada	dl
+Ovo	xh
+Seo Sprint	vv
+Truecaller	tl
+Zalo	mj
+Poshmark	oz
+DENT	zz
+Skout	wg
+Taobao	qd
+Dhani	os
+1688	hn
+Indomaret	ju
+Google Voice	gf
+Leboncoin	do
+Venmo	yy
+Fiverr	cn
+CashKaro	ii
+Chispa	ir
+CashApp	it
+Celcoin	ix
+GiraBank	jd
+Br777	jw
+Sorare	jy
+Idealista	kk
+FotoCasa	kq
+RedBook	qf
+Clubhouse	et
+Bumble	mo
+Lidl	pz
+Yemeksepeti	yi
+Immowelt	ib
+Linode	ex
+Wolt	rr
+Keybase	bf
+Tango	xr
+Wish	xv
+Joyride	xx
+Zoho	zh
+Potato	lq
+Paxful	dn
+icq	iq
+Grab	jg
+Hermes	en
+GoerliFaucet	ez
+MapleSEA	oh
+Amasia	yo
+ZCity	ys
+Bilibili	zs
+Kwai	vp
+inDriver	rl
+Potato Chat	fj
+CommunityGaming	zx
+Justdating	pu
+OneAset	aj
+Carousell	gj
+Nttgame	zy
+Quack	zw
+Digikala	zv
+BigC	zu
+Budweiser	zt
+IndiaPlays	zq
+Biedronka	zn
+OfferUp	zm
+ROBINHOOD	zj
+Setel	zg
+OnTaxi	zf
+Zilch	zd
+JTExpress	yx
+IPLwin	yv
+Payzapp	yp
+Allegro	yn
+eWallet	yj
+米画师Mihuashi	yd
+paycell	xz
+Depop	xy
+Taki	xw
+RecargaPay	xu
+MPL	xq
+Familia	xn
+Wmaraci	xl
+InFund	xi
+GalaxyChat	xe
+RummyOla	xb
+FoxFord	wz
+BIP	ww
+AIS	wv
+IZI	wt
+Leboncoin1	wq
+163COM	wp
+Parkplus	wo
+GameArena	wn
+YouGotaGift	wl
+Mobile01	wk
+Meta	vy
+HeyBox	vx
+CoinField	vw
+LadyMaria	vq
+Brand20ua	vo
+Yaay	vn
+Q12 Trivia	vf
+Banqi	vc
+SportGully	va
+OffGamers	uz
+Meliuz	uy
+Kirana	uw
+BinBin	uv
+IRCTC	us
+MyDailyCash	ur
+TopDetal	uq
+CafeBazaar	uo
+СhampionСasino	uj
+RuTube	ui
+Yubo	uh
+Fiqsy	ug
+Eneba	uf
+Onet	ue
+Disney Hotstar	ud
+Flink	tv
+Lyft	tu
+Ziglu	tt
+Paysend	tr
+Swvl	tq
+IndiaGold	tp
+Akulaku	tm
+dbrUA	tj
+cryptocom	ti
+Noon	tf
+eFood	te
+ChaingeFinance	td
+Brahma	sy
+Crowdtap	sx
+NCsoft	sw
+LOCO	su
+Starbucks	sr
+HappyFresh	sp
+RummyWealth	so
+YoWin	sm
+Skroutz	sk
+HandyPick	sj
+SneakersnStuff	sf
+Feeld	se
+Voggt	sc
+AGIBANK	sa
+Sheerid	rx
+BLS-SPAIN	rw
+Kotak811	rv
+HOP	ru
+hily	rt
+Lotus	rs
+hamrahaval	rp
+PingCode	ro
+neftm	rn
+Fotka	rk
+BillMill	ri
+Ace2Three	rh
+Akudo	rf
+Tick	rb
+KeyPay	ra
+WorldRemit	qx
+MoneyСontrol	qt
+Blued	qn
+CMTcuzdan	ql
+Bit	qk
+MoneyPay	qg
+GG	qe
+Payberry	qb
+Nifty	px
+SellMonitor	pw
+Bitaqaty	pt
+CDkeys	pq
+SnappFood	ph
+Casino, bet, gambling	pc
+SkyTV	pb
+Gamekit	pa
+CashFly	oy
+Damejidlo	ox
+Gabi	ou
+Vlife	oq
+LigaPro	oo
+Corona	om
+Codashop	oe
+FWDMAX	od
+DealShare	oc
+Onlinerby	ob
+Pyro Music	ny
+Stripe	nu
+Oldubil	ns
+Siply	np
+Virgo	no
+Giftcloud	nn
+Thisshop	nm
+Myntra	nl
+Gittigidiyor	nk
+AlloBank	nh
+FunPay	ng
+Coindcx	ne
+SoulApp	mx
+Transfergo	mw
+Fruitz	mv
+MyMusicTaste	mu
+NovaPoshta	ms
+Fastmail	mr
+GMNG	mq
+Winmasters	mp
+RRSA	mn
+ApostaGanha	ml
+LongHu	mk
+Weidian	mf
+Things	lz
+MrGreen	lw
+Crickpe	lu
+Okta	lr
+Algida	lp
+OPPO	lo
+Grofers	ln
+PurePlatfrom	lk
+Santander	lj
+MediBuddy	lg
+E bike Gewinnspiel	le
+Cashmine	ld
+ssoidnet	la
+SpatenOktoberfest	ky
+Vivo	kx
+Foody	kw
+Rush	kv
+RoyalWin	ku
+Hirect	ks
+Eyecon	kr
+AdaKami	ko
+Verse	kn
+Rozetka	km
+kolesa.kz	kl
+Bukalapak	kh
+FreeChargeApp	kg
+kufarby	kb
+Kaya	jz
+Swiggy	jx
+TurkiyePetrolleri	jt
+mzadqatar	jm
+Aitu	jj
+Monobank	ji
+PingPong	jh
+Nanovest	je
+Wing Money	jb
+Weverse	ja
+Foodpanda	nz
+Global24	iz
+FoodHub	iy
+Bykea	iu
+TeenPattiStarpro	ih
+JoGo	ic
+Socios	ia
+AliExpress	hx
+Ukrnet	hu
+Bitso	ht
+Asda	hs
+JKF	hr
+Magicbricks	hq
+Meesho	hp
+Cathay	ho
+Globus	hm
+Band	hl
+JungleeRummy	hi
+Uplay	hh
+Cleartrip	hf
+Mewt	he
+MarketPapa	hd
+MOMO	hc
+MIYACHAT	gy
+Humta	gv
+Fora	gu
+SamsungShop	gs
+Freelancer	gq
+A9A	gn
+GlobalTel	gl
+Hotline	gi
+GyFTR	gh
+PagSmile	gg
+Paytm	ge
+Surveytime	gd
+Roposo	ga
+Mylove	fy
+99acres	fw
+Vidio	fv
+Şikayet var	fs
+Phound	fp
+MobiKwik	fo
+Touchance	fm
+RummyLoot	fl
+BLIBLI	fk
+Lalamove	fh
+IndianOil	fg
+CliQQ	fe
+PharmEasy	fc
+XadrezFeliz	fa
+miloan	ey
+Picpay	ev
+LiveScore	eu
+Kwork	er
+Temu	ep
+Sizeer	eo
+ZéDelivery	em
+Bisu	el
+MrQ	ej
+Taksheel	ei
+ContactSys	eg
+Nextdoor	ef
+Gamer	ed
+RummyCulture	ec
+Voltz	eb
+JamesDelivery	ea
+Powerkredite	dx
+Divar	dw
+NoBroker	dv
+AUBANK	du
+Iwplay	dm
+Pairs	dk
+Loanflix	di
+CloudChat	dd
+YikYak	dc
+ezbuy	db
+Getmega	cz
+Icrypex	cx
+PaddyPower	cw
+WashXpress	cv
+炙热星河	cu
+AgriDevelop	cs
+Mercado	cq
+Uklon	cp
+Rediffmail	co
+Prom	cm
+UWIN	cl
+BeReal	ck
+Dotz	cj
+redBus	ci
+Pocket52	ch
+Gemgala	cg
+irancell	cf
+Bazos	cb
+SuperS	ca
+Dosi	bx
+MonobankIndia	bu
+Alfa	bt
+TradeUP	bs
+Adani	bq
+MarketGuru	bm
+G2G	bk
+勇仕网络Ys4fun	bi
+MIXMART	bg
+GCash	bc
+LazyPay	bb
+CityBase	az
+Ruten	ay
+CrefisaMais	ax
+Haraj	au
+Perfluence	at
+Wondermart	ar
+Glovo	aq
+UU163	ao
+GalaxyWin	af
+Iti	ad
+Probo	aa
+Alfagift	bn
+Ininal	hy
+Эльдорадо	ke
+Quipp	cc
+Twilio	ee
+HQ Trivia	kp
+LYKA	gz
+DoorDash	ac
+CELEBe	ai
+Taikang	aw
+99app	ki
+Hopi	jl
+Mocospace	gm
+iQIYI	es
+Zomato	dy
+Trendyol	pr
+Ticketmaster	gp
+Qoo10	eq
+Full rent	full
+DewuPoison	lx
+1xbet	wj
+My11Circle	ha
+Ximalaya	nw
+Airtel	zl
+Huya	pp
+Douyu	ak
+Olacabs	ly
+Dominos Pizza	dz
+WinzoGame	vs
+TenChat	cr
+Switips	hg
+YouStar	gb
+iFood	pd
+Delivery Club	dt
+CourseHero	yg
+Trip	nq
+MEGA	qr
+EasyPay	rz
+NimoTV	kz
+CAIXA	my
+Astropay	gr
+Happn	df
+Mercari	dg
+premium.one	po
+Inboxlv	iv
+GoFundMe	bp
+Hepsiburadacom	gx
+Zupee	mi
+Tosla	nr
+Wise	bo
+CallApp	gw
+Faceit	qz
+Xiaomi	yu
+YAPPY	kj
+Dream11	ve
+IQOS	il
+ShellBox	vg
+KuCoinPlay	sq
+Expressmoney	ba
+Baidu	li
+Subito	lc
+LoveLocal	zi
+Likee	jf
+Chalkboard	gr_rd
+CasinoPlus	boo
+Kleinanzeigen	ebay_kl
+Rakuten	rktn
+GoChat	ads
+Smiles	agb
+Any Other	ot
+Notifire	xo
+PrivetMir	wu
+Yami	wy
+SynotTip	xc
+Miravia	yr
+Walmart	wr
+FortunaSK	xg
+FreeNow	zb
+Shpock	ze
+MotorkuX	vr
+Indodax	ws
+Upwork	abq
+Beanfun	gr_bf
+Claude	acz
+Emenu	enu
+Naimi.kz	nmkz
+MYCAR.KZ	mcr
+Aviata.kz	avt
+Universal Beijing Resort	ubr_gr
+Uzum	adq
+CMB	agm
+Ipsos iSay	agk
+Pinduoduo	zp
+BharatPe	aab
+JioMart	aay
+Playerzpot	abs
+Tata Neu	ace
+Winter Loan	acf
+CollabAct	acg
+QwikCilver	acr
+Tata CLiQ Palette	acs
+CityMall	acu
+A23	acv
+PoshVine	adb
+Marwadi	adg
+Frizza	adh
+Zepto	adi
+RummyCircle	adj
+Khatabook	adk
+EarnEasy	adl
+FitCredit	adm
+BankKaro	aev
+SKCAPITAL	afj
+Roomster	afn
+Servify	ago
+Hdfcbank	agp
+Bajaj Finserv	agq
+Yonogames	agr
+Angel One	aha
+MockGuru	aht
+Hinge Dating	aii
+Kamatera	aed
+Tomato	ack
+Bearwww	aar
+Anibis	agh
+Bunq	ahe
+Beboo	abd
+Namars	abn
+Radium	acn
+BusyFly	adx
+VFS GLOBAL	afp
+БлинБери	ahk
+BRO	ahm
+Bitrue	ahx
+Kia	aid
+Royal Canin	aif
+Aya Bank	aaw
+Netease	aaq
+Rappi	aba
+Cabify	adp
+NEQUI	aij
+Ozan	aaz
+Fups	aih
+PlayerAuctions	aer
+Chevron	afk
+XXGame	aas
+Alchemy	aav
+Boyaa	aax
+BytePlus	abi
+Privy	abr
+Meituan	acj
+Pockit	aag
+Tiptapp	aap
+RockeTreach	aau
+Taptap Send	abc
+Foodora	abe
+Friendtech	abz
+Haleon	ach
+Airtime	acy
+TRUTH SOCIAL	ada
+PlayOJO	adc
+JinJiang	aec
+Neocrypto	aft
+Tuul	afy
+Klarna	afz
+VIMpay	agc
+Grailed	agd
+MTR Mobile	age
+Meitu	agf
+OneForma	agg
+Abbott	ags
+GMX	abk
+WEBDE	abo
+Strato	ahj
+1and1	ahs
+Surveybell	ahv
+CheckDomain	acd
+AR Lens	aco
+BonusLink	acp
+Suntec	acq
+GoPayz	aeb
+Tanoti	aei
+Maybank	afb
+Myboost	afm
+MeiQFashion	agx
+Fugeelah	ahf
+K11	aig
+Striving in the Lion City	aiv
+Marktplaats	agj
+Prime Opinion	aiq
+ArenaPlus	abt
+Willhaben	adt
+OpenPhone	ahd
+Seznam	adu
+Packeta	afw
+Publi24	aga
+Betano	agl
+Zasilkovna	ahw
+BPJSTK	abu
+BCA Syariah	adf
+Cloud Manager	ael
+AstraPay	aem
+Redigame	aen
+Allofresh	aeo
+ONBUKA	aep
+Godrej	aeq
+Greywoods	aet
+TheFork	aeu
+Flip	aew
+Neon	aex
+Bunda	afc
+Astra Otoshop	afd
+Gamesofa	afx
+Flik	agn
+Jiva Petani	agz
+Ubisoft	ahb
+UangMe	aho
+PizzaHut	ahp
+SEEDS	ahq
+AfreecaTV	aip
+TipTip	air
+Schibsted	ais
+FeetFinder	ait
+LuckyLand Slots	acc
+Daki	ahi
+Baihe	agy
+This Fate	ahr
+Njuškalo	agi
+Coca-Cola	abb
+Kaching	abx
+Couponscom	aby
+Spark Driver	acb
+Tiv	acl
+Razer	acm
+Zach Bryan	adn
+SmartyPig	ado
+Fliff	ahy
+SpaceWeb	ain
+Nloto	aiy
+Brevo	aiz
+Av100pro	ajl
+Ollis	akf
+Bankera	ajd
+G2A	aja
+CupidMedia	aje
+IPanelOnline	ajf
+Fortumo	ajg
+WAUG	ajh
+Rebtel	ajj
+Gener8	ajm
+Gopuff	ajn
+Feels	akd
+ZUS Coffee	aik
+Zoo Game	ail
+CoffeeTea	ajo
+Move It	aix
+Prakerja	aio
+Venteny	ajk
+AsiaMiles	ajp
+MyValue	ajq
+Boku	ajr
+GetPlus	ajs
+Daya Auto	aju
+ShareParty	ajv
+INDOBA	ajw
+Kemnaker RI	ajx
+All Access	ajy
+MotionPay	ajz
+LinkAja	aka
+LEROY MERLIN	lrmn
+Book My Play	akg
+WINDS	akw
+Ryde	ako
+Her	akp
+Blank Street	akq
+Voi	akr
+Sony LIV	akx
+Hanya	aks
+Prenagen Club	akh
+Tiketcom	aki
+Easycash	akj
+Dagangan	akk
+DOKU	akl
+LOTTE Mart	akm
+Chakra Rewards	akn
+Xworldwallet	akt
+GOMOFY	aky
+StockyDodo	ali
+Mera Gaon	alp
+Gurmanika	akb
+DIKIDI	ake
+Lydia	ale
+Muzz	alm
+Ankama	alg
+Profee	alo
+Nice88	ald
+Paybis	akc
+Lion Parcel	alh
+GetResponse	ala
+Remotasks	aln
+TIER	alv
+Greggs	als
+Womply	wmpl
+Pcipay	pcp
+Battlestate Games	gr_bg
+华人街	hrnjie
+Acko	amf
+SBI Card	amg
+WooPlus	ama
+Vercel	amb
+Discover Hong Kong	ame
+Smart	amd
+Segari	alt
+BC Game	alu
+Vida	alw
+NutriClub	alx
+Bebeclub	aly
+Punjab citizen	amm
+TEAMORU	ami
+GORDAN	amk
+MitID	amh
+Moneyview	amt
+Shein	aez
+Supercell	ane
+VARUS	anc
+CoinFantasy	cf_id
+PYYPL	ppl
+Migros	mgrs
+Xbox	aml
+Yellow	ylww
+Satu	satu_kz
+OpenBudjet	ob_uz
+Sonol	snl
+Yuda	yudafr
+Google Messenger	gmsg
+Fastwin	fst
+Media express	meex
+Getsbet	avz
+Bingoplus	ars
+Branch	brnc
+Poker Circle	Prcl
+Radquest	ayk
+Hicard	aoa
+ludoplus	ldps
+ConfirmTkt	ctkt
+match.com	axr
+Verasight	vrst
+Goa games	ggms
+BETININ	btnn
+Tealive	avb
+Busqo	busq
+Nuum.ru	nuum
+meta.ua	mua
+Narendra modi	qcx
+Namaskar	nmcr
+Taj Rummy	tjrm
+Happypancake	hpnc
+Keeta	keet
+HDFC Egro	hdfc
+Tomoro Coffee	tmro
+fivesurveys	fvss
+Benjamin	bdx
+ding	ding
+theAsianparent	aprnt
+Tune studio	tnst
+Talabat	ani
+HPGas	qim
+Loloo	aos
+OLXkz	olxkz
+OLXua	olxua
+OLXpl	olxpl
+Talkatone	talk
+Etsy	etsy
+OLXro	olxro
+OLXbg	olxbg
+OLXpt	olxpt
+GitHub	git
+OLXuz	olxuz
+Streamlabs	sls
+Unstop	uns
+Stan	stn
+Swarail	swl
+Magicpin	ade
+51exch	boc
+Truemoney	bbm
+Innopay	qjp
+Hypermart	hyp
+Vision11	vsn
+Saathi	qiy
+Capital One	apr
+Bingo101	bva
+Efsane	brh
+Rapido	bgf
+Sixer	qbs
+Omnicard	qhy
+Shopsy	qcb
+College Pulse	cgp
+Credit Karma	bqz
+Gaintplay	gnt
+TrapCall	trc
+Kudos	kds
+Resy	rsy
+Blastbucks	blbk
+Timewall	tmw
+Sideline	apl
+Juno	jno
+Chase	bhi
+Dutch Bros	dtc
+CenturyLink	ctr
+3Fun	auw
+Ibotta	ibt
+Acima	cim
+Aspiration	aptn
+Ring4	ari
+Taimi	tmi
+Pelago	plg
+Tumblr	tum
+Audible	aud
+RapidApi	rap
+SerpApi	ser
+Bosslike	bol
+FMCPay	fmc
+RummyYes	qbn
+Wallapop	awv
+MMLive	mml
+Reddit	bnl
+Winclash	qks
+Outlier	auz
+Courtyard	ctd
+TurboTenant	tbn
+BridgeMoney	gmy
+Zillow	zlw
+SeatGeek	sgk
+Dave	dav
+GetHoldings	ghe
+RedNote / Xiaohongshu	xgu
+DocuSign	blr
+Qpon	bnu
+Starexch	sre
+Playkaro247	pkr
+SpinWinner	qkt
+Atlas Earth	awq
+Instamatch	nst
+Ludo11	qld
+Truemeds	qdx
+Nykaa	hj
+Roz Rummy	qrr
+Paisabazaar	pzr
+汇旺 Huione Pay	bou
+Skills	skls
+Cursor	crsr
+Aws	aws
+Goldsbet	qiv
+Cricbuzz	qjm
+Royaljeet	qit
+Quoka	avk
+500px	fpx
+BigBasket	aqj
+Google Chat	ght
+Winmatch	bwb
+Chipotle	cpt
