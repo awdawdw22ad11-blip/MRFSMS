@@ -4221,8 +4221,8 @@ async function updateUserLastLogin(userId) {
 
 const whatsappCountries = [
     { name: 'South Africa', code: '+27', price: 44, countryId: 31, flag: '🇿🇦' },
-    { name: 'Canada', code: '+1', price: 130, countryId: 36, flag: '🇨🇦' },
     { name: 'Indonesia', code: '+62', price: 90, countryId: 6, flag: '🇮🇩' },
+    { name: 'Canada', code: '+1', price: 130, countryId: 36, flag: '🇨🇦' },
     { name: 'Vietnam', code: '+84', price: 170, countryId: 10, flag: '🇻🇳' },
     { name: 'Philippines', code: '+63', price: 190, countryId: 4, flag: '🇵🇭' },
     { name: 'Colombia', code: '+57', price: 240, countryId: 33, flag: '🇨🇴' },
