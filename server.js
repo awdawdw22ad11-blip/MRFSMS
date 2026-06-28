@@ -5216,6 +5216,9 @@ const careemCountries = [
     { name: 'Zambia', code: '+260', price: 59.58, countryId: 147, flag: '🇿🇲' },
     { name: 'Zimbabwe', code: '+263', price: 98.78, countryId: 96, flag: '🇿🇼' }
 ];
+const noonCountries = [
+    { name: 'Saudi Arabia', code: '+966', price: 170, countryId: 53, flag: '🇸🇦' }
+];
 const spotifyCountries = [
     { name: 'USA', code: '+1', price: 160, countryId: 187, flag: '🇺🇸' }
 ];
@@ -9116,6 +9119,12 @@ const serviceCatalog = {
         serviceName: 'Careem Number',
         serviceCode: SMSBOWER_CAREEM_SERVICE,
         countries: careemCountries
+    },
+        noon: {
+        serviceType: 'noon',
+        serviceName: 'Noon Number',
+        serviceCode: 'tf',
+        countries: noonCountries
     },
     spotify: {
         serviceType: 'spotify',
