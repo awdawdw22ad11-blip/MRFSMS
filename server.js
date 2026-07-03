@@ -4531,7 +4531,7 @@ const instagramCountries = [
     { name: 'India', code: '+91', price: 44, countryId: 22, flag: '🇮🇳' },
     { name: 'Mozambique', code: '+258', price: 40, countryId: 80, flag: '🇲🇿' },
     { name: 'Ghana', code: '+233', price: 60, countryId: 38, flag: '🇬🇭' },
-    { name: 'Cameroon', code: '+237', price: 41, countryId: 41, flag: '🇨🇲' },
+    { name: 'Cameroon', code: '+237', price: 41, countryId: 42, flag: '🇨🇲' },
     { name: 'Senegal', code: '+221', price: 39, countryId: 61, flag: '🇸🇳' },
     { name: 'Poland', code: '+48', price: 43, countryId: 15, flag: '🇵🇱' },
     { name: 'Saudi Arabia', code: '+966', price: 38, countryId: 53, flag: '🇸🇦' },
