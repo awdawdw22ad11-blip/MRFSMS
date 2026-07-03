@@ -51,7 +51,10 @@ const state = {
     adminReferrals: [],
     pendingReferralCode: '',
     shouldOpenRegisterFromLanding: false,
-    lastAdminSecurityEventId: 0
+    lastAdminSecurityEventId: 0,
+    tierCache: new Map(),
+    expandedTierCountryId: null,
+    orderTierMeta: new Map()
 };
 
 const ORDER_PROVIDER_WAITING_STATUS = 'STATUS_WAIT_CODE';
@@ -2684,6 +2687,62 @@ function sortCountriesForDisplay(countries) {
     });
 }
 
+function renderTierRankBadge(rank) {
+    const tone = rank === 'Gold'
+        ? 'background:linear-gradient(135deg,#fde68a,#f59e0b);color:#7c2d12;'
+        : rank === 'Silver'
+            ? 'background:linear-gradient(135deg,#e2e8f0,#94a3b8);color:#1e293b;'
+            : 'background:linear-gradient(135deg,#fdba74,#c2410c);color:#fff;';
+    return `<span style="display:inline-flex;align-items:center;border-radius:999px;padding:.18rem .55rem;font-size:10px;font-weight:800;${tone}">${escapeHtml(rank)}</span>`;
+}
+
+function renderTierPanelMarkup(countryId, countryName, tiersState) {
+    if (tiersState === 'loading') {
+        return `<div style="padding:.9rem 1rem;font-size:12px;color:#15803d;">Loading series...</div>`;
+    }
+    if (!Array.isArray(tiersState) || !tiersState.length) {
+        return `<div style="padding:.9rem 1rem;font-size:12px;color:#64748b;">No custom series configured for this country yet.</div>`;
+    }
+    return tiersState.map((tier) => `
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.65rem 1rem;border-top:1px solid #d1fae5;">
+            <div style="display:flex;align-items:center;gap:.5rem;min-width:0;">
+                ${renderTierRankBadge(tier.rank)}
+                <div style="font-size:12px;color:#334155;">
+                    <div style="font-weight:700;">Tier ${escapeHtml(tier.tierNumber)}</div>
+                    <div style="color:#64748b;">id ${escapeHtml(tier.providerId)}${tier.count != null ? ' • ' + escapeHtml(tier.count) + ' pcs' : ''}</div>
+                </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:.6rem;">
+                <div style="font-weight:800;font-size:13px;color:#0f172a;white-space:nowrap;">${formatMoney(tier.price)}</div>
+                <button class="country-buy-button" style="padding:.5rem .8rem;" data-action="buy-tier" data-country-name="${escapeAttr(countryName)}" data-country-id="${escapeAttr(countryId)}" data-tier-number="${escapeAttr(tier.tierNumber)}" data-provider-id="${escapeAttr(tier.providerId)}">Buy</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+async function toggleTierPanel(countryId, countryName) {
+    const key = String(countryId);
+    if (state.expandedTierCountryId === key) {
+        state.expandedTierCountryId = null;
+        renderCountries();
+        return;
+    }
+    state.expandedTierCountryId = key;
+    const cached = state.tierCache.get(key);
+    const hasUsableCache = Array.isArray(cached) && cached.length > 0;
+    if (!hasUsableCache) {
+        state.tierCache.set(key, 'loading');
+        renderCountries();
+        try {
+            const data = await fetchJSON(`/api/tiers/${encodeURIComponent(state.currentService)}/${encodeURIComponent(countryId)}`);
+            state.tierCache.set(key, Array.isArray(data?.tiers) ? data.tiers : []);
+        } catch {
+            state.tierCache.set(key, []);
+        }
+    }
+    renderCountries();
+}
+
 function renderCountries() {
     const container = qs('country-list');
     const search = qs('country-search')?.value.trim().toLowerCase() || '';
@@ -2716,7 +2775,9 @@ function renderCountries() {
                 <div class="text-right">Price</div>
                 <div class="text-right">Action</div>
             </div>
-            ${filtered.map((country, index) => `
+            ${filtered.map((country, index) => {
+                const isExpanded = state.expandedTierCountryId === String(country.countryId);
+                return `
                 <div class="country-table-row"${index === 0 ? ' style="border-top:none;"' : ''}>
                     <div class="flex items-center justify-center">${renderCountryFlagMarkup(country)}</div>
                     <div class="min-w-0">
@@ -2724,12 +2785,15 @@ function renderCountries() {
                         <div class="truncate text-sm font-semibold text-slate-900">${escapeHtml(country.name)}</div>
                         <div class="mt-1 truncate text-xs text-emerald-700/80">${escapeHtml(country.code || 'N/A')}</div>
                     </div>
-                    <div class="text-right text-sm font-bold text-slate-900 whitespace-nowrap">${formatMoney(country.price)}</div>
-                    <div class="flex justify-end">
+                 <div class="text-right text-sm font-bold text-slate-900 whitespace-nowrap" style="${state.currentService === 'whatsapp' ? 'padding-right:2.5rem;' : ''}">${formatMoney(country.price)}</div>
+                    <div class="flex justify-end items-center gap-1.5">
                         <button class="country-buy-button" ${canOrder ? `data-action="buy-country" data-country-name="${escapeAttr(country.name)}" data-country-id="${escapeAttr(country.countryId)}"` : 'disabled aria-disabled="true"'}>${canOrder ? 'Buy Number' : 'Coming Soon'}</button>
+                        ${canOrder ? `<button data-action="toggle-tiers" data-country-name="${escapeAttr(country.name)}" data-country-id="${escapeAttr(country.countryId)}" title="Show series options" style="border:1px solid #bbf7d0;background:#ffffff;border-radius:.6rem;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto;color:#15803d;font-size:11px;transform:${isExpanded ? 'rotate(180deg)' : 'none'};transition:transform .15s;">▼</button>` : ''}
                     </div>
                 </div>
-            `).join('')}
+                ${isExpanded ? `<div style="background:#f8fffb;">${renderTierPanelMarkup(country.countryId, country.name, state.tierCache.get(String(country.countryId)))}</div>` : ''}
+            `;
+            }).join('')}
         </div>
     `;
     updateHero();
@@ -2772,7 +2836,12 @@ function renderOrderButtons(order) {
     }
     const cancelEnabled = canCancelOrder(order);
     const cancelLockMessage = getOrderCancelLockMessage(order);
+    const tierMeta = state.orderTierMeta.get(String(order.id));
+    const tierRetryButton = (tierMeta && tierMeta.nextTierNumber && cancelEnabled)
+        ? `<button class="rounded-xl border border-emerald-500 bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-400 hover:border-emerald-400 px-3 py-2.5 text-sm font-semibold transition" data-action="retry-next-tier" data-order-id="${escapeAttr(order.id)}">OTP nahi aayi? Tier ${escapeAttr(tierMeta.nextTierNumber)} try karein</button>`
+        : '';
     container.innerHTML = `
+        ${tierRetryButton}
         <button class="rounded-xl ${cancelEnabled ? 'border border-orange-500 bg-orange-500 text-white shadow-lg shadow-orange-500/20 hover:bg-orange-400 hover:border-orange-400' : 'border border-slate-200 bg-white text-slate-900 hover:bg-slate-50 disabled:opacity-100'} px-3 py-2.5 text-sm font-semibold transition" data-action="cancel-order" title="${escapeAttr(cancelEnabled ? 'Cancel and refund this order' : cancelLockMessage)}" ${cancelEnabled ? '' : 'disabled'}>Cancel and Refund</button>
     `;
 }
@@ -4861,6 +4930,117 @@ async function orderCountry(name, id) {
     }
 }
 
+async function buyTierNumber(name, id, tierNumber, providerId) {
+    if (!state.currentUser) {
+        openAuthModal('login');
+        return;
+    }
+    if (!canOrderCurrentService()) {
+        showToast('This service is available for browsing only right now.', 'error');
+        return;
+    }
+    const selectedService = state.currentService;
+    const cachedTiers = state.tierCache.get(String(id));
+    const tierInfo = Array.isArray(cachedTiers) ? cachedTiers.find((t) => String(t.tierNumber) === String(tierNumber)) : null;
+    const lockedProviderId = providerId != null ? Number(providerId) : Number(tierInfo?.providerId);
+    const currentBalance = Number(state.currentUser.balance || 0);
+    const requiredBalance = Number(tierInfo?.price || 0);
+    if (currentBalance <= 0 || (requiredBalance > 0 && currentBalance < requiredBalance)) {
+        showToast('Low balance. Please add balance first.', 'info', 3200);
+        return;
+    }
+    setHistoryView('activations', { scroll: true });
+    setActivationFilter('waiting');
+    const idempotencyKey = typeof window.crypto?.randomUUID === 'function'
+        ? window.crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
+    try {
+        const response = await fetch('/api/order/tier', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                countryName: name,
+                countryId: Number(id),
+                service: selectedService,
+                tierNumber: Number(tierNumber),
+                providerId: Number.isFinite(lockedProviderId) ? lockedProviderId : undefined,
+                idempotencyKey
+            }),
+            credentials: 'include'
+        });
+        if (!response.ok) throw new Error(await response.text());
+        const order = await response.json();
+        state.orderTierMeta.set(String(order.id), {
+            service: selectedService,
+            countryId: Number(id),
+            countryName: name,
+            tierNumber: Number(tierNumber),
+            nextTierNumber: order.nextTierNumber || null
+        });
+        const optimisticOrder = {
+            id: order.id,
+            country: name,
+            country_id: Number(id),
+            service_type: selectedService,
+            flag: state.allCountries.find((c) => String(c.countryId) === String(id))?.flag,
+            phone_number: order.number || order.phone_number || 'Processing...',
+            price: requiredBalance,
+            created_at: new Date().toISOString(),
+            expires_at: new Date(Date.now() + 25 * 60 * 1000).toISOString(),
+            cancel_available_at: new Date(Date.now() + 17 * 1000).toISOString(),
+            order_status: 'pending',
+            status: 'pending',
+            otp_received: false
+        };
+        ensureOrderCardVisible(optimisticOrder);
+        showToast(`Number purchased (Tier ${tierNumber})`, 'success');
+        await refreshUserInfo();
+        ensureOrderCardVisible(optimisticOrder);
+    } catch (err) {
+        const message = err.message || 'Order failed';
+        if (/balance|wallet|insufficient/i.test(message)) {
+            showToast('Low balance. Please add balance first.', 'info', 3200);
+            return;
+        }
+        showToast(message, 'error');
+    }
+}
+
+async function retryNextTier(orderId) {
+    const meta = state.orderTierMeta.get(String(orderId));
+    if (!meta || !meta.nextTierNumber) {
+        showToast('No more series available for this country.', 'info');
+        return;
+    }
+    try {
+        const cancelResponse = await fetch(`/api/orders/${orderId}/cancel`, { method: 'POST', credentials: 'include' });
+        const cancelMessage = await cancelResponse.text();
+        if (!cancelResponse.ok) throw new Error(cancelMessage);
+        suppressCancelledOrderInDashboard(orderId);
+        if (state.activeOrder && String(state.activeOrder.id) === String(orderId)) {
+            closeOrderModal();
+        }
+        renderActiveOrders(state.orders);
+        await refreshWalletBalanceSilently({ showIncreaseToast: false });
+        // Fetch a fresh tier list right before buying so the next tier's providerId is current,
+        // since SMS Bower's series/providers can change between the original page load and now.
+        state.tierCache.delete(String(meta.countryId));
+        let nextProviderId = null;
+        try {
+            const data = await fetchJSON(`/api/tiers/${encodeURIComponent(meta.service)}/${encodeURIComponent(meta.countryId)}`);
+            const freshTiers = Array.isArray(data?.tiers) ? data.tiers : [];
+            state.tierCache.set(String(meta.countryId), freshTiers);
+            const nextTier = freshTiers.find((t) => Number(t.tierNumber) === Number(meta.nextTierNumber));
+            nextProviderId = nextTier?.providerId ?? null;
+        } catch {
+            nextProviderId = null;
+        }
+        await buyTierNumber(meta.countryName, meta.countryId, meta.nextTierNumber, nextProviderId);
+    } catch (err) {
+        showToast(err.message || 'Could not switch series, please try again.', 'error');
+    }
+}
+
 function updateProcessingModalState() {
     const wrap = qs('processing-orders-wrap');
     const summary = qs('processing-orders-summary');
@@ -5437,6 +5617,18 @@ function bindStaticEvents() {
         }
         if (action === 'buy-country') {
             await orderCountry(actionTarget.dataset.countryName, actionTarget.dataset.countryId);
+            return;
+        }
+        if (action === 'toggle-tiers') {
+            await toggleTierPanel(actionTarget.dataset.countryId, actionTarget.dataset.countryName);
+            return;
+        }
+        if (action === 'buy-tier') {
+            await buyTierNumber(actionTarget.dataset.countryName, actionTarget.dataset.countryId, actionTarget.dataset.tierNumber, actionTarget.dataset.providerId);
+            return;
+        }
+        if (action === 'retry-next-tier') {
+            await retryNextTier(actionTarget.dataset.orderId);
             return;
         }
         if (action === 'cancel-purchase-progress') {
