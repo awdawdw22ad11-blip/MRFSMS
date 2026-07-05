@@ -6437,7 +6437,7 @@ const upworkCountries = [
     { name: 'Paraguay', code: '+595', price: 2.18, countryId: 87, flag: '🇵🇾' },
     { name: 'Thailand', code: '+66', price: 17.11, countryId: 52, flag: '🇹🇭' },
     { name: 'Chile', code: '+56', price: 8.37, countryId: 151, flag: '🇨🇱' },
-    { name: 'Lithuania', code: '+370', price: 2.18, countryId: 44, flag: '🇱🇹' },
+ �   { name: 'Lithuania', code: '+370', price: 2.18, countryId: 44, flag: '🇱🇹' },
     { name: 'Kosovo', code: '+383', price: 2.18, countryId: 1004, flag: '🇽🇰' }
 ];
 
@@ -6659,7 +6659,7 @@ const cabifyCountries = [
 const nequiCountries = [];
 
 const ozanCountries = [
-    { name: 'Turkey', code: '+90', price: 182.73, countryId: 62, flag: '🇹🇷' },
+    { name: 'Turkey', code: '+90', price: 182.73, countryId: 62, f�lag: '🇹🇷' },
     { name: 'United Kingdom', code: '+44', price: 9.83, countryId: 16, flag: '🇬🇧' }
 ];
 
@@ -6801,7 +6801,7 @@ const jinjiangCountries = [
     { name: 'Madagascar', code: '+261', price: 2.18, countryId: 17, flag: '🇲🇬' },
     { name: 'Montenegro', code: '+382', price: 2.18, countryId: 171, flag: '🇲🇪' },
     { name: 'Serbia', code: '+381', price: 2.18, countryId: 29, flag: '🇷🇸' },
-    { name: 'Sierra Leone', code: '+232', price: 2.18, countryId: 115, flag: '🇸🇱' },
+    { name: 'Sierra Leone', code: '+232', price: 2.18, countryId: 115, flag: '🇸🇱' �},
     { name: 'Suriname', code: '+597', price: 2.18, countryId: 142, flag: '🇸🇷' },
     { name: 'Sweden', code: '+46', price: 2.18, countryId: 46, flag: '🇸🇪' },
     { name: 'Tajikistan', code: '+992', price: 2.18, countryId: 143, flag: '🇹🇯' },
@@ -6901,7 +6901,7 @@ const jinjiangCountries = [
     { name: 'Namibia', code: '+264', price: 2.18, countryId: 138, flag: '🇳🇦' },
     { name: 'Nigeria', code: '+234', price: 35.67, countryId: 19, flag: '🇳🇬' },
     { name: 'Norway', code: '+47', price: 3.57, countryId: 174, flag: '🇳🇴' },
-    { name: 'Pakistan', code: '+92', price: 35.67, countryId: 66, flag: '🇵🇰' },
+    {� name: 'Pakistan', code: '+92', price: 35.67, countryId: 66, flag: '🇵🇰' },
     { name: 'Papua new gvineya', code: '+675', price: 2.18, countryId: 79, flag: '🇵🇬' },
     { name: 'Romania', code: '+40', price: 1.46, countryId: 32, flag: '🇷🇴' },
     { name: 'Saudi Arabia', code: '+966', price: 35.67, countryId: 53, flag: '🇸🇦' },
@@ -7114,7 +7114,7 @@ const flikCountries = [];
 const jivapetaniCountries = [];
 
 const ubisoftCountries = [
-    { name: 'United Kingdom', code: '+44', price: 2.18, countryId: 16, flag: '🇬🇧' },
+    { name: 'United Kingdom', code: '+44', price: 2.18, countryId: 16, flag: '🇬�🇧' },
     { name: 'Indonesia', code: '+62', price: 1.46, countryId: 6, flag: '🇮🇩' },
     { name: 'Malaysia', code: '+60', price: 2.18, countryId: 7, flag: '🇲🇾' },
     { name: 'Netherlands', code: '+31', price: 14.2, countryId: 48, flag: '🇳🇱' },
@@ -7281,7 +7281,7 @@ const rebtelCountries = [
     { name: 'Singapore', code: '+65', price: 29.12, countryId: 196, flag: '🇸🇬' },
     { name: 'New Zealand', code: '+64', price: 30.58, countryId: 67, flag: '🇳🇿' },
     { name: 'Mongolia', code: '+976', price: 29.12, countryId: 72, flag: '🇲🇳' },
-    { name: 'Denmark', code: '+45', price: 30.58, countryId: 172, flag: '🇩🇰' },
+    { name: 'Denmark', code: '+45�', price: 30.58, countryId: 172, flag: '🇩🇰' },
     { name: 'Australia', code: '', price: 30.21, countryId: 175, flag: '🇦🇺' },
     { name: 'USA Virtual', code: '+1', price: 22.93, countryId: 12, flag: '🇺🇸' }
 ];
@@ -7490,7 +7490,7 @@ const pcipayCountries = [];
 const battlestategamesCountries = [
     { name: 'United Kingdom', code: '+44', price: 5.46, countryId: 16, flag: '🇬🇧' },
     { name: 'France', code: '+33', price: 4, countryId: 78, flag: '🇫🇷' },
-    { name: 'Indonesia', code: '+62', price: 1.46, countryId: 6, flag: '🇮🇩' }
+    { name: 'Indonesia', code: '+62', price: 1.46, countryId: 6, flag: '🇮🇩' �}
 ];
 
 const ackoCountries = [
@@ -7647,7 +7647,7 @@ const googlemessengerCountries = [
     { name: 'Mali', code: '+223', price: 182.73, countryId: 69, flag: '🇲🇱' },
     { name: 'Rwanda', code: '+250', price: 182.73, countryId: 140, flag: '🇷🇼' },
     { name: 'Gabon', code: '+241', price: 182.73, countryId: 154, flag: '🇬🇦' },
-    { name: 'Spain', code: '+34', price: 268.63, countryId: 56, flag: '🇪🇸' },
+    { name: 'Spain', code: '+34', price: 268.63, countryId: 56, flag: '🇪🇸'� },
     { name: 'Nicaragua', code: '+505', price: 182.73, countryId: 90, flag: '🇳🇮' },
     { name: 'Moldova', code: '+373', price: 182.73, countryId: 85, flag: '🇲🇩' },
     { name: 'USA', code: '+1', price: 182.73, countryId: 187, flag: '🇺🇸' },
@@ -7744,7 +7744,7 @@ const googlemessengerCountries = [
     { name: 'Bolivia', code: '+591', price: 182.73, countryId: 92, flag: '🇧🇴' },
     { name: 'Grenada', code: '+1', price: 182.73, countryId: 127, flag: '🇬🇩' },
     { name: 'Latvia', code: '+371', price: 182.73, countryId: 49, flag: '🇱🇻' },
-    { name: 'Tajikistan', code: '+992', price: 182.73, countryId: 143, flag: '🇹🇯' },
+    { name: 'Tajikistan', code: '+992', price: 1�82.73, countryId: 143, flag: '🇹🇯' },
     { name: 'Brunei Darussalam', code: '+673', price: 182.73, countryId: 121, flag: '🇧🇳' },
     { name: 'Cayman Islands', code: '+1', price: 182.73, countryId: 170, flag: '🇰🇾' },
     { name: 'Australia', code: '', price: 182.73, countryId: 175, flag: '🇦🇺' },
@@ -8040,7 +8040,7 @@ const rednotexiaohongshuCountries = [];
 
 const docusignCountries = [
     { name: 'Latvia', code: '+371', price: 30.58, countryId: 49, flag: '🇱🇻' },
-    { name: 'Indonesia', code: '+62', price: 11.46, countryId: 6, flag: '🇮🇩' },
+    { name: 'Indonesia', code: '+62', pri�ce: 11.46, countryId: 6, flag: '🇮🇩' },
     { name: 'Chile', code: '+56', price: 22.57, countryId: 151, flag: '🇨🇱' },
     { name: 'Romania', code: '+40', price: 15.29, countryId: 32, flag: '🇷🇴' },
     { name: 'Argentina', code: '+54', price: 11.46, countryId: 39, flag: '🇦🇷' },
@@ -8214,7 +8214,7 @@ const kliqCountries = [
     { name: 'Morocco', code: '+212', price: 54.96, countryId: 37, flag: '🇲🇦' },
     { name: 'Netherlands', code: '+31', price: 14.56, countryId: 48, flag: '🇳🇱' },
     { name: 'Philippines', code: '+63', price: 54.96, countryId: 4, flag: '🇵🇭' },
-    { name: 'South Africa', code: '+27', price: 11.28, countryId: 31, flag: '🇿🇦' },
+    { name: 'South Africa', code: '+27', price: 11.28, countryId: 31, flag: '🇿🇦' }�,
     { name: 'Spain', code: '+34', price: 49.14, countryId: 56, flag: '🇪🇸' },
     { name: 'United Kingdom', code: '+44', price: 33.12, countryId: 16, flag: '🇬🇧' },
     { name: 'USA', code: '+1', price: 51.69, countryId: 187, flag: '🇺🇸' },
@@ -8429,7 +8429,7 @@ const thedermacoCountries = [];
 
 const predikCountries = [];
 
-const brevistayCountries = [];
+const brevistayCountries = �[];
 
 const australiapostCountries = [];
 
@@ -8680,7 +8680,7 @@ const extraServiceCountryArraysByServiceType = {
     "surveybell": surveybellCountries,
     "checkdomain": checkdomainCountries,
     "arlens": arlensCountries,
-    "bonuslink": bonuslinkCountries,
+    "bon�uslink": bonuslinkCountries,
     "suntec": suntecCountries,
     "gopayz": gopayzCountries,
     "tanoti": tanotiCountries,
@@ -8914,7 +8914,7 @@ const extraServiceCountryArraysByServiceType = {
     "ibotta": ibottaCountries,
     "acima": acimaCountries,
     "aspiration": aspirationCountries,
-    "ring4": ring4Countries,
+  �  "ring4": ring4Countries,
     "taimi": taimiCountries,
     "pelago": pelagoCountries,
     "tumblr": tumblrCountries,
@@ -9165,7 +9165,7 @@ const serviceCatalog = {
     uber: {
         serviceType: 'uber',
         serviceName: 'Uber Number',
-        serviceCode: SMSBOWER_UBER_SERVICE,
+        serviceCode: SMS�BOWER_UBER_SERVICE,
         countries: uberCountries
     },
     microsoft: {
@@ -9378,7 +9378,7 @@ const EXTRA_SERVICE_CODE_FILE_PATHS = [
 const EXTRA_SERVICE_COUNTRY_FILE_IGNORE_NAMES = new Set(['all services codes.txt', 'add my new services.txt']);
 const WHATSAPP_COUNTRY_FILE_PATH = path.join(__dirname, 'public', 'whatsapp.txt');
 const COUNTRY_CODE_NAME_ALIASES = {
-    usa: ['united states', 'united states of america'],
+    usa: ['united states', 'united sta�tes of america'],
     'usa virtual': ['usa', 'united states', 'united states of america'],
     'united kingdom': ['uk'],
     uk: ['united kingdom'],
@@ -9578,7 +9578,7 @@ function parseStructuredExtraServiceBlocks(rawText) {
 function getStructuredExtraServiceDescriptors() {
     const descriptors = [];
     EXTRA_SERVICE_STRUCTURED_SOURCE_FILE_PATHS.forEach((filePath) => {
-        try {
+        t�ry {
             const rawText = fs.readFileSync(filePath, 'utf8');
             parseStructuredExtraServiceBlocks(rawText).forEach((entry) => {
                 descriptors.push({
@@ -9759,7 +9759,7 @@ function extendServiceCatalogWithExtraServices(catalog) {
     structuredExtraServices.forEach((entry) => {
         if (!entry?.serviceType || !entry?.serviceLabel) return;
         if (!extraServiceSourceLabelsByServiceType.has(entry.serviceType)) {
-            extraServiceSourceLabelsByServiceType.set(entry.serviceType, entry.serviceLabel);
+            extraServiceSourceLabelsByServiceType.set(entry.serviceType, entry.s�erviceLabel);
         }
     });
     const extraCountryArraysByServiceType = buildExtraServiceCountryArraysFromFiles(catalog);
@@ -9970,7 +9970,7 @@ function parseNumberResponse(data) {
                 return parseV1NumberResponse(trimmed);
             }
         }
-        return parseV1NumberResponse(trimmed);
+        return parseV1Num�berResponse(trimmed);
     }
     if (data && typeof data === 'object') {
         if (data.activationId && data.phoneNumber) {
@@ -10159,7 +10159,7 @@ async function buyNumberWithRetry(countryId, baseUsdPrice, maxAttempts = 3, serv
                 };
             }
             if (attempt < maxAttempts) {
-                await waitMs(8000);
+                await waitMs(8000�);
             }
         } catch (err) {
             if (attempt === maxAttempts) {
@@ -10436,7 +10436,7 @@ const TIER_PRICING_PKR = {
         },
         // ======================== MYANMAR (5) ========================
         5: {
-            2579: 224,
+    �        2579: 224,
             3428: 224,
             3193: 213,
             3001: 120,
@@ -10735,7 +10735,7 @@ const TIER_PRICING_PKR = {
             2750: 1857,
             3225: 420,
             3160: 269,
-            3001: 120
+        �    3001: 120
         },
         // ======================== BURUNDI (119) ========================
         119: {
@@ -11018,7 +11018,7 @@ const TIER_PRICING_PKR = {
             3428: 196,
             3001: 120
         },
-        // ======================== BENIN (120) ========================
+        // ======================== BENIN (120) =========�===============
         120: {
             2750: 196,
             3428: 196,
@@ -11315,7 +11315,7 @@ const TIER_PRICING_PKR = {
         // ======================== COMOROS (133) ========================
         133: {
             3370: 280,
-            3428: 280,
+   �         3428: 280,
             3001: 120
         },
         // ======================== TIMOR-LESTE (91) ========================
@@ -11652,7 +11652,7 @@ const PROVIDER_RANK_CONFIG = {
     // Tanzania
     3428: 'Gold',
     3001: 'Silver',
-    2354: 'Bronze',
+�    2354: 'Bronze',
     2750: 'Bronze',
     3168: 'Bronze',
     // Suriname
@@ -12050,7 +12050,7 @@ const PROVIDER_RANK_CONFIG = {
     3428: 'Gold',
     3001: 'Silver',
     2750: 'Bronze',
-    2260: 'Bronze',
+    2260: 'Br�onze',
     2263: 'Bronze',
     3237: 'Bronze',
     3193: 'Bronze',
@@ -12384,7 +12384,7 @@ app.get('/api/tiers/:service/:countryId', async (req, res) => {
             let rawProviders = [];
             let fetchError = null;
             try {
-                rawProviders = await fetchProviderTiers(countryId, serviceConfig.serviceCode);
+                ra�wProviders = await fetchProviderTiers(countryId, serviceConfig.serviceCode);
             } catch (e) {
                 fetchError = e.message;
             }
@@ -12549,7 +12549,7 @@ app.post('/api/order/tier', ensureAuth, async (req, res) => {
             user.id, user.email, serviceConfig.serviceType, serviceConfig.serviceName,
             resolvedCountryName, countryObj?.code || '', Number(countryId),
             orderPrice, providerCostPKR, 'balance', 'pending', 'pending',
-            result.phoneNumber, result.activationId, user.name,
+            result.phoneNum�ber, result.activationId, user.name,
             expiresAt, cancelAvailableAt, now.toISOString(), idempotencyKey, now.toISOString()
         ]);
 
@@ -12739,7 +12739,7 @@ app.get('/api/service-catalog', (_req, res) => {
 app.get('/api/service-icons', (_req, res) => {
     try {
         res.set('Cache-Control', 'public, max-age=300');
-        res.json({
+�        res.json({
             icons: SERVICE_ICON_MANIFEST,
             summary: SERVICE_ICON_SUMMARY
         });
@@ -12957,7 +12957,7 @@ app.post('/api/register', async (req, res) => {
     }
 });
 
-app.post('/api/login', async (req, res) => {
+�app.post('/api/login', async (req, res) => {
     try {
         const email = sanitizeEmail(req.body.email);
         const password = req.body.password;
@@ -13084,6 +13084,8 @@ app.post('/api/order', ensureAuth, async (req, res) => {
         await assertUserNotSecurityBlocked(req.session.userId);
 
         // ---- AUTO TIER PURCHASE (uses your new tier map) ----
+        const latestProviderSnapshot = await getLatestProviderBalanceSnapshot();
+        const providerBalanceBeforePurchase = await getProviderBalance();
         const result = await buyNumberWithAutoTier(
             countryObj.countryId,
             serviceConfig.serviceCode,
@@ -13100,7 +13102,6 @@ app.post('/api/order', ensureAuth, async (req, res) => {
         // ---- end auto tier ----
 
         activationToRelease = result.activationId || null;
-        const providerBalanceBeforePurchase = await getProviderBalance();
         const providerBalanceAfterPurchase = await getProviderBalance();
         const providerCostMetrics = computeProviderCostMetrics({
             balanceBefore: providerBalanceBeforePurchase.success ? providerBalanceBeforePurchase.balance : null,
@@ -13138,7 +13139,7 @@ app.post('/api/order', ensureAuth, async (req, res) => {
 
         const activeOrdersCountRes = await client.query(
             `SELECT COUNT(*)::int AS total FROM orders
-             WHERE user_id = $1 AND COALESCE(status, order_status, 'pending') IN ('pending', 'active', 'completed_waiting_user_action')`,
+             WHERE user_id = $1 AND COALESCE(status, order_�status, 'pending') IN ('pending', 'active', 'completed_waiting_user_action')`,
             [user.id]
         );
         const activeOrdersCount = Number(activeOrdersCountRes.rows[0]?.total || 0);
@@ -13306,7 +13307,7 @@ app.post('/api/orders/:orderId/cancel', ensureAuth, async (req, res) => {
             return res.status(400).send('OTP already received, cannot cancel');
         }
         const now = new Date();
-        const expiry = order.expires_at ? new Date(order.expires_at) : null;
+        const expiry = order.expires_at ? new Date(order.expires�_at) : null;
         const cancelTime = now.toISOString();
         if (order.activation_id) {
             const initialVerification = await verifyRefundEligibilityWithProvider(order);
@@ -13440,7 +13441,7 @@ app.post('/api/orders/:orderId/cancel', ensureAuth, async (req, res) => {
             realProviderCost: remainingProviderCostPkr,
             realProviderCostProviderCurrency: remainingProviderCostCurrency,
             providerCostVerified: providerCostVerified || Boolean(order.provider_cost_verified),
-            providerCostSource: providerCostVerified ? 'cancel_balance_reconciliation' : order.provider_cost_source,
+            providerCostSource: providerCostVerified ? 'cancel_balance_reconciliation' : order.provider�_cost_source,
             providerBalanceAfter: providerBalanceAfterCancel.success
                 ? providerBalanceAfterCancel.balance
                 : order.provider_balance_after,
@@ -13604,7 +13605,7 @@ app.get('/api/orders/:orderId/otp', ensureAuth, async (req, res) => {
             return res.json({ received: true, code: order.otp_code });
         }
         if (normalizeOrderStatus(order) !== 'pending') {
-            return res.json({ received: false, inactive: true, status: order.status || order.order_status });
+            return res.json({ received: false, inactive:� true, status: order.status || order.order_status });
         }
         if (!order.activation_id) {
             return res.json({ received: false, error: 'No activation ID' });
@@ -13799,7 +13800,7 @@ app.get('/api/my-payment-history', ensureAuth, async (req, res) => {
 
 app.post('/api/admin/payment-requests/:id/approve', ensureAdmin, async (req, res) => {
     const client = await pool.connect();
-    let screenshotToDelete = null;
+    let screensh�otToDelete = null;
     try {
         await client.query('BEGIN');
         const requestRes = await client.query('SELECT * FROM payment_requests WHERE id = $1 FOR UPDATE', [Number(req.params.id)]);
