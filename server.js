@@ -13290,6 +13290,50 @@ app.post('/api/orders/:orderId/cancel', ensureAuth, async (req, res) => {
             return res.status(403).send('Unauthorized');
         }
         const auditUsername = getAuditUsername(user, order);
+        // Special case: expired SMS-received order — allow cancel with NO refund
+        const isExpiredSmsOrder =
+            getRawOrderStatus(order) === 'completed_waiting_user_action' &&
+            order.expires_at && new Date() >= new Date(order.expires_at);
+        if (isExpiredSmsOrder) {
+            const cancelledAt = new Date().toISOString();
+            const cancelledOrder = await updateOrder(order.id, {
+                order_status: 'cancelled',
+                status: 'cancelled',
+                refund_processing_at: null
+            }, { client, eventAt: cancelledAt, finalizedAt: cancelledAt, syncNumberHistory: false });
+            await syncOrderFinancialProtection(cancelledOrder || order, {
+                websiteCharge: Number(order.price || 0),
+                websiteRefund: 0,
+                websiteProfit: Number(order.price || 0),
+                realProviderCost: getRealProviderCostAmount(order),
+                realProviderCostProviderCurrency: roundMoney(order.real_provider_cost_provider_currency || 0, 6),
+                providerCostVerified: Boolean(order.provider_cost_verified),
+                providerCostSource: order.provider_cost_source || null,
+                providerBalanceAfter: order.provider_balance_after || null,
+                providerBalanceCurrency: order.provider_balance_currency || PROVIDER_BALANCE_CURRENCY,
+                providerStatus: order.provider_final_status || order.provider_status || null,
+                providerFinalStatus: order.provider_final_status || null,
+                providerStatusSyncedAt: cancelledAt,
+                providerUsed: isProviderUsedOrder(order),
+                refundedAt: null,
+                securityEventType: 'cancel_expired_sms_no_refund',
+                reason: 'expired_sms_received_no_refund_cancel',
+                recordRiskEvent: false,
+                syncNumberHistory: true,
+                syncUserRisk: false,
+                eventAt: cancelledAt,
+                finalizedAt: cancelledAt
+            }, { client });
+            await client.query('COMMIT');
+            logOrderHotfixEvent('cancel_expired_sms_no_refund', order, {
+                username: auditUsername,
+                cancelTime: cancelledAt,
+                reason: 'expired_sms_received_no_refund_cancel',
+                refunded: false,
+                otpExisted: hasStoredOtp(order)
+            });
+            return res.status(200).send('Order cancelled. No refund issued.');
+        }
         await enforceCancelSecurityLimits(user.id, order, { client });
         if (isRefundProcessing(order)) {
             await client.query('ROLLBACK');
