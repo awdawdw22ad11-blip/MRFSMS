@@ -6437,7 +6437,7 @@ const upworkCountries = [
     { name: 'Paraguay', code: '+595', price: 2.18, countryId: 87, flag: '🇵🇾' },
     { name: 'Thailand', code: '+66', price: 17.11, countryId: 52, flag: '🇹🇭' },
     { name: 'Chile', code: '+56', price: 8.37, countryId: 151, flag: '🇨🇱' },
- �   { name: 'Lithuania', code: '+370', price: 2.18, countryId: 44, flag: '🇱🇹' },
+    { name: 'Lithuania', code: '+370', price: 2.18, countryId: 44, flag: '🇱🇹' },
     { name: 'Kosovo', code: '+383', price: 2.18, countryId: 1004, flag: '🇽🇰' }
 ];
 
