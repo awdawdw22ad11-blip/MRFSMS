@@ -2301,6 +2301,11 @@ async function getOrdersByUser(userId) {
           AND COALESCE(status, order_status, 'pending') IN ('pending', 'active', 'completed_waiting_user_action')
           AND LOWER(COALESCE(status, 'pending')) NOT IN ('completed', 'cancelled', 'expired', 'expired_refunded')
           AND LOWER(COALESCE(order_status, 'pending')) NOT IN ('completed', 'cancelled', 'expired', 'expired_refunded')
+          AND NOT (
+              LOWER(COALESCE(status, order_status, 'pending')) = 'completed_waiting_user_action'
+              AND expires_at IS NOT NULL
+              AND expires_at <= CURRENT_TIMESTAMP
+          )
         ORDER BY id DESC
     `, [userId]);
     return rows.map(normalizeOrder);
