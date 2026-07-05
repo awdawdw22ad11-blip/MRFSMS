@@ -6659,7 +6659,6 @@ const cabifyCountries = [
 const nequiCountries = [];
 
 const ozanCountries = [
-    { name: 'Turkey', code: '+90', price: 182.73, countryId: 62, f�lag: '🇹🇷' },
     { name: 'United Kingdom', code: '+44', price: 9.83, countryId: 16, flag: '🇬🇧' }
 ];
 
