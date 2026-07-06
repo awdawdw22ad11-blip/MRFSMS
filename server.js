@@ -4270,19 +4270,19 @@ async function updateUserLastLogin(userId) {
 }
 
 const whatsappCountries = [
-    { name: 'South Africa', code: '+27', price: 20, countryId: 31, flag: '\u{1F1FF}\u{1F1E6}' },
-    { name: 'Indonesia', code: '+62', price: 90, countryId: 6, flag: '\u{1F1EE}\u{1F1E9}' },
-    { name: 'Canada', code: '+1', price: 130, countryId: 36, flag: '\u{1F1E8}\u{1F1E6}' },
-    { name: 'Vietnam', code: '+84', price: 100, countryId: 10, flag: '\u{1F1FB}\u{1F1F3}' },
-    { name: 'Philippines', code: '+63', price: 140, countryId: 4, flag: '\u{1F1F5}\u{1F1ED}' },
-    { name: 'Colombia', code: '+57', price: 114, countryId: 33, flag: '\u{1F1E8}\u{1F1F4}' },
+    { name: 'South Africa', code: '+27', price: 54, countryId: 31, flag: '\u{1F1FF}\u{1F1E6}' },
+    { name: 'Indonesia', code: '+62', price: 110, countryId: 6, flag: '\u{1F1EE}\u{1F1E9}' },
+    { name: 'Canada', code: '+1', price: 160, countryId: 36, flag: '\u{1F1E8}\u{1F1E6}' },
+    { name: 'Vietnam', code: '+84', price: 140, countryId: 10, flag: '\u{1F1FB}\u{1F1F3}' },
+    { name: 'Philippines', code: '+63', price: 180, countryId: 4, flag: '\u{1F1F5}\u{1F1ED}' },
+    { name: 'Colombia', code: '+57', price: 180, countryId: 33, flag: '\u{1F1E8}\u{1F1F4}' },
     { name: 'Saudi Arabia', code: '+966', price: 240, countryId: 53, flag: '\u{1F1F8}\u{1F1E6}' },
-    { name: 'Thailand', code: '+66', price: 188, countryId: 52, flag: '\u{1F1F9}\u{1F1ED}' },
+    { name: 'Thailand', code: '+66', price: 240, countryId: 52, flag: '\u{1F1F9}\u{1F1ED}' },
     { name: 'Brazil', code: '+55', price: 289, countryId: 73, flag: '\u{1F1E7}\u{1F1F7}' },
-    { name: 'United Kingdom', code: '+44', price: 330, countryId: 16, flag: '\u{1F1EC}\u{1F1E7}' },
+    { name: 'United Kingdom', code: '+44', price: 390, countryId: 16, flag: '\u{1F1EC}\u{1F1E7}' },
     { name: 'India', code: '+91', price: 530, countryId: 22, flag: '\u{1F1EE}\u{1F1F3}' },
     { name: 'USA', code: '+1', price: 470, countryId: 187, flag: '\u{1F1FA}\u{1F1F8}' },
-    { name: 'Chile', code: '+56', price: 170.07, countryId: 151, flag: '\u{1F1E8}\u{1F1F1}' },
+    { name: 'Chile', code: '+56', price: 190.07, countryId: 151, flag: '\u{1F1E8}\u{1F1F1}' },
     { name: 'Syria', code: '+963', price: 43.32, countryId: 1333, flag: '\u{1F1F8}\u{1F1FE}' },
     { name: 'Somalia', code: '+252', price: 65.16, countryId: 149, flag: '\u{1F1F8}\u{1F1F4}' },
     { name: 'Kyrgyzstan', code: '+996', price: 300.8, countryId: 11, flag: '\u{1F1F0}\u{1F1EC}' },
@@ -10279,18 +10279,18 @@ const TIER_PRICING_PKR = {
         36: {
             // \u{1F949} BRONZE
             2462: 344,
-            2567: 227,
-            2430: 215,
-            2675: 215,
-            3109: 200,
-            3001: 190,
-            3160: 140,
-            2217: 132,
-            3198: 131,
-            3228: 130,
+            2567: 297,
+            2430: 265,
+            2675: 240,
+            3109: 220,
+            3001: 210,
+            3160: 200,
+            2217: 192,
+            3198: 180,
+            3228: 170,
             // \u{1F948} SILVER
             2568: 215,
-            2262: 168,
+            2262: 160,
             // \u{1F947} GOLD
             3406: 180
         },
@@ -10299,14 +10299,14 @@ const TIER_PRICING_PKR = {
             // \u{1F949} BRONZE
             2579: 593,
             3193: 204,
-            3109: 143,
-            3288: 140,
+            3109: 193,
+            3288: 180,
             // \u{1F947} GOLD
-            2335: 190,
-            2286: 130,
-            3243: 119,
-            3253: 114,
-            2236: 110
+            2335: 210,
+            2286: 190,
+            3243: 1140,
+            3253: 180,
+            2236: 170
         },
         // ======================== INDIA (22) ========================
         22: {
@@ -10318,26 +10318,26 @@ const TIER_PRICING_PKR = {
         // ======================== INDONESIA (6) ========================
         6: {
             // \u{1F949} BRONZE
-            2260: 253,
-            2750: 253,
-            54: 173,
-            3001: 110,
-            3386: 105,
-            3094: 104,
-            3355: 103,
-            1056: 102,
-            3160: 101,
-            3347: 100,
-            3168: 99,
-            3417: 98,
-            3109: 90,
+            2260: 320,
+            2750: 300,
+            54: 200,
+            3001: 300,
+            3386: 200,
+            3094: 194,
+            3355: 183,
+            1056: 172,
+            3160: 161,
+            3347: 140,
+            3168: 130,
+            3417: 120,
+            3109: 110,
             // \u{1F948} SILVER
             3406: 110,
-            3426: 91,
-            3320: 92,
-            2272: 93,
-            3334: 94,
-            3267: 96,
+            3426: 191,
+            3320: 192,
+            2272: 193,
+            3334: 194,
+            3267: 174,
             // \u{1F947} GOLD
             3424: 130,
             3029: 130,
@@ -10353,10 +10353,10 @@ const TIER_PRICING_PKR = {
             3193: 204,
             2217: 190,
             3160: 190,
-            3001: 144,
-            3109: 140,
+            3001: 174,
+            3109: 160,
             // \u{1F948} SILVER
-            3371: 143
+            3371: 163
         },
         // ======================== SAUDI ARABIA (53) ========================
         53: {
@@ -10380,10 +10380,10 @@ const TIER_PRICING_PKR = {
             // \u{1F949} BRONZE
             2750: 426,
             3335: 342,
-            3193: 230,
-            3109: 200,
-            2217: 188,
-            3001: 190,
+            3193: 260,
+            3109: 230,
+            2217: 220,
+            3001: 210,
             // \u{1F948} SILVER
             3371: 392,
             3237: 200
@@ -10429,12 +10429,12 @@ const TIER_PRICING_PKR = {
             // \u{1F949} BRONZE (all)
             2750: 300,
             3001: 200,
-            3237: 197,
-            2840: 196,
-            3082: 194,
-            3160: 160,
-            2318: 130,
-            3109: 100
+            3237: 297,
+            2840: 206,
+            3082: 294,
+            3160: 260,
+            2318: 160,
+            3109: 140
         },
 
         // ======================== NEW COUNTRIES (Chile \u{2192} Singapore) ========================
@@ -10443,11 +10443,11 @@ const TIER_PRICING_PKR = {
             2750: 508,
             3428: 508,
             3193: 214,
-            2217: 161,
-            3160: 120,
-            3001: 121,
-            3235: 122,
-            3109: 123
+            2217: 261,
+            3160: 190,
+            3001: 181,
+            3235: 172,
+            3109: 160
         },
         // ======================== SYRIA (1333) ========================
         1333: {
