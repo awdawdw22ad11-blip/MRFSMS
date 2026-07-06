@@ -4240,7 +4240,7 @@ const whatsappCountries = [
     { name: 'Chile', code: '+56', price: 170.07, countryId: 151, flag: '\u{1F1E8}\u{1F1F1}' },
     { name: 'Syria', code: '+963', price: 43.32, countryId: 1333, flag: '\u{1F1F8}\u{1F1FE}' },
     { name: 'Somalia', code: '+252', price: 65.16, countryId: 149, flag: '\u{1F1F8}\u{1F1F4}' },
-    { name: 'Kyrgyzstan', code: '+996', price: 72.8, countryId: 11, flag: '\u{1F1F0}\u{1F1EC}' },
+    { name: 'Kyrgyzstan', code: '+996', price: 300.8, countryId: 11, flag: '\u{1F1F0}\u{1F1EC}' },
     { name: 'Iraq', code: '+964', price: 72.8, countryId: 47, flag: '\u{1F1EE}\u{1F1F6}' },
     { name: 'Mongolia', code: '+976', price: 72.8, countryId: 72, flag: '\u{1F1F2}\u{1F1F3}' },
     { name: 'Myanmar', code: '+95', price: 72.8, countryId: 5, flag: '\u{1F1F2}\u{1F1F2}' },
