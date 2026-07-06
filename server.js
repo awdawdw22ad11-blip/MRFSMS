@@ -3903,6 +3903,7 @@ async function getAdminProviderAnalytics(options = {}) {
     const financialResetDate = FINANCIAL_STATS_RESET_DATE;
     const userLookup = new Map(users.map((user) => [String(user.id), user]));
     const ordersByUser = new Map();
+    const userSpendingMap = new Map();
     const serviceBreakdownMap = new Map();
     const dailyEarningsMap = new Map();
     const riskEvents = [];
@@ -3917,6 +3918,7 @@ async function getAdminProviderAnalytics(options = {}) {
     let totalWebsiteProfit = 0;
     let totalRealProviderCost = 0;
     let totalRevenue = 0;
+    let totalUserSpending = 0;
     let financiallyCompletedOrders = 0;
 
     const ensureDailyEntry = (dateKey) => {
@@ -3948,6 +3950,13 @@ async function getAdminProviderAnalytics(options = {}) {
         const financialProfit = getFinancialProfitAmount(order);
         const serviceKey = String(order?.provider_service || order?.service_type || 'unknown').trim() || 'unknown';
         const userIdKey = order?.user_id == null ? null : String(order.user_id);
+        if (userIdKey && normalizeOrderStatus(order) === 'completed') {
+            const userSpendAmount = Number(order.amount ?? order.price ?? 0);
+            if (Number.isFinite(userSpendAmount) && userSpendAmount > 0) {
+                totalUserSpending += userSpendAmount;
+                userSpendingMap.set(userIdKey, Number(userSpendingMap.get(userIdKey) || 0) + userSpendAmount);
+            }
+        }
         if (withinFinancialResetWindow) {
             totalOrders += 1;
             if (financiallySuccessfulOrder) {
@@ -4148,10 +4157,15 @@ async function getAdminProviderAnalytics(options = {}) {
         .filter((user) => user.security_blocked_until && new Date(user.security_blocked_until) > new Date())
         .sort((left, right) => new Date(right.security_blocked_until || 0) - new Date(left.security_blocked_until || 0))
         .slice(0, blockedUserLimit);
+    const userSpending = {
+        total: roundMoney(totalUserSpending),
+        perUser: Object.fromEntries(Array.from(userSpendingMap.entries()).map(([userId, amount]) => [userId, roundMoney(amount)]))
+    };
 
     return {
         summary,
         financeSummary,
+        userSpending,
         dailyEarnings,
         serviceBreakdown,
         recentBalanceSnapshots,
