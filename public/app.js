@@ -18,6 +18,8 @@ const state = {
     adminRefreshInterval: null,
     adminProviderSummaryRefreshInFlight: false,
     adminPendingPaymentsRefreshInFlight: false,
+    adminNumberManagementLoaded: false,
+    adminNumberManagementLoadInFlight: false,
     adminAlertInterval: null,
     adminAlertTimeout: null,
     lastPendingCount: 0,
@@ -2046,12 +2048,34 @@ function syncAdminAccordionLayout() {
     });
 }
 
+function isAdminNumberManagementAccordion(accordionId) {
+    const normalizedId = String(accordionId || '').trim().toLowerCase();
+    return normalizedId === 'number-management' || normalizedId === 'orders';
+}
+
+function isAdminNumberManagementOpen() {
+    return adminAccordion.items.some((item) => isAdminNumberManagementAccordion(item.dataset.adminAccordionId) && item.classList.contains('is-open'));
+}
+
+function resetAdminNumberManagement() {
+    const container = qs('admin-orders-list');
+    state.adminNumberManagementLoaded = false;
+    if (container) {
+        container.innerHTML = renderEmptyState('Number Management not loaded', 'Open this section to load order records only when needed.');
+    }
+}
+
 function setActiveAdminAccordion(accordionId) {
     if (!accordionId || !adminAccordion.items.length) return;
     adminAccordion.items.forEach((item) => {
         item.classList.toggle('is-open', item.dataset.adminAccordionId === accordionId);
     });
     syncAdminAccordionLayout();
+    if (isAdminNumberManagementAccordion(accordionId)) {
+        void loadAdminNumberManagement();
+    } else {
+        resetAdminNumberManagement();
+    }
 }
 
 function initAdminAccordion() {
@@ -4019,6 +4043,33 @@ function renderAdminOrders(orders) {
     );
 }
 
+async function loadAdminNumberManagement(options = {}) {
+    const { force = false, silent = false } = options;
+    const container = qs('admin-orders-list');
+    if (!state.currentUser?.isAdmin || !container) return;
+    if (state.adminNumberManagementLoadInFlight || (state.adminNumberManagementLoaded && !force)) return;
+    state.adminNumberManagementLoadInFlight = true;
+    container.innerHTML = renderEmptyState('Loading Number Management...', 'Orders are loaded only when this section is opened to keep the admin dashboard fast.');
+    syncAdminAccordionLayout();
+    try {
+        const orders = await fetchJSON('/api/admin/orders');
+        if (!isAdminNumberManagementOpen()) {
+            state.adminNumberManagementLoaded = false;
+            return;
+        }
+        renderAdminOrders(Array.isArray(orders) ? orders : []);
+        state.adminNumberManagementLoaded = true;
+    } catch (err) {
+        container.innerHTML = renderEmptyState('Number Management unavailable', 'Order records could not be loaded right now.');
+        if (!silent) {
+            showToast(err.message || 'Failed to load Number Management', 'error');
+        }
+    } finally {
+        state.adminNumberManagementLoadInFlight = false;
+        syncAdminAccordionLayout();
+    }
+}
+
 function syncSidebarPendingPayment(requests) {
     const pendingRequests = (requests || []).filter((request) => String(request.status || '').toLowerCase() === 'pending');
     const totalPendingAmount = pendingRequests.reduce((sum, request) => sum + Number(request.amount || 0), 0);
@@ -4524,8 +4575,7 @@ async function loadAdminData() {
     if (!state.currentUser || !state.currentUser.isAdmin) return;
     try {
         const adminScrollPositions = captureAdminScrollPositions();
-        const [orders, paymentRequests, ledgerTransactions, pendingTransactions, users, balanceAdjustments, referrals, providerAnalytics] = await Promise.all([
-            fetchJSON('/api/admin/orders'),
+        const [paymentRequests, ledgerTransactions, pendingTransactions, users, balanceAdjustments, referrals, providerAnalytics] = await Promise.all([
             fetchJSON('/api/admin/payment-requests'),
             fetchJSON('/api/admin/transactions/history'),
             fetchJSON('/api/admin/transactions'),
@@ -4543,7 +4593,7 @@ async function loadAdminData() {
         renderAdminStats(providerAnalytics?.financeSummary || {});
         renderAdminTotalUsersSummary(users);
         renderAdminDailyProfitDetails(providerAnalytics?.dailyEarnings || [], providerAnalytics?.financeSummary || {});
-        renderAdminUserSpending(calculateUserSpending(orders), users);
+        renderAdminUserSpending(providerAnalytics?.userSpending || calculateUserSpending([]), users);
         renderAdminProviderSummary(providerAnalytics?.summary || {});
         renderAdminProviderServiceBreakdown(providerAnalytics?.serviceBreakdown || []);
         renderAdminProviderBalanceSnapshots(providerAnalytics?.recentBalanceSnapshots || []);
@@ -4567,7 +4617,6 @@ async function loadAdminData() {
             state.lastAdminSecurityEventId = Math.max(state.lastAdminSecurityEventId || 0, latestSecurityEventId);
         }
         setElementHtmlIfChanged('admin-payment-requests-list', renderAdminPaymentRequests(pendingPaymentRequests, pendingTransactions));
-        renderAdminOrders(orders);
         qs('admin-payment-history-list').innerHTML = renderAdminPaymentHistory(processedPaymentRequests);
         qs('admin-financial-ledger-list').innerHTML = renderFinancialLedger(ledgerTransactions);
         syncAdminUsersList();
@@ -4637,6 +4686,8 @@ async function refreshUserInfo() {
             qs('admin-panel').classList.add('hidden');
             if (state.adminRefreshInterval) window.clearInterval(state.adminRefreshInterval);
             state.adminRefreshInterval = null;
+            state.adminNumberManagementLoaded = false;
+            state.adminNumberManagementLoadInFlight = false;
             state.lastPendingCount = 0;
             stopAdminAlertLoop();
         }
@@ -5591,6 +5642,9 @@ function bindStaticEvents() {
         if (action === 'refresh-admin-panel') {
             if (state.currentUser?.isAdmin) {
                 await loadAdminData();
+                if (isAdminNumberManagementOpen()) {
+                    await loadAdminNumberManagement({ force: true });
+                }
             }
             return;
         }
