@@ -151,7 +151,7 @@ function buildWidgetJs() {
     '@keyframes mrfpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}'+
 
     '#mrf-live-popup{position:fixed;bottom:75px;right:24px;z-index:99999;'+
-    'width:330px;max-height:480px;background:#1e293b;border:1px solid #334155;'+
+    'width:355px;max-height:500px;background:#1e293b;border:1px solid #334155;'+
     'border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.55);'+
     'display:none;flex-direction:column;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}'+
 
