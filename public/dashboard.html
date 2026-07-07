@@ -1582,5 +1582,45 @@ Spam activity = Ban risk</div>
         })();
     </script>
     <script src="/app.js"></script>
+    <!-- LIVE FEED POPUP -->
+<button id="lf-open-btn"
+    onclick="document.getElementById('lf-popup').style.display='flex'"
+    style="position:fixed;bottom:90px;right:20px;z-index:99999;
+           background:#16a34a;color:#fff;border:none;border-radius:999px;
+           padding:10px 16px;cursor:pointer;font-size:13px;font-weight:700;
+           box-shadow:0 4px 18px rgba(22,163,74,.5);display:flex;
+           align-items:center;gap:7px">
+    <span style="width:8px;height:8px;background:#fff;border-radius:50%;
+                 display:inline-block;animation:lf-pulse 1.3s infinite"></span>
+    Live
+</button>
+
+<div id="lf-popup"
+     style="display:none;position:fixed;bottom:150px;right:20px;z-index:99999;
+            width:350px;height:480px;background:#1e293b;border-radius:16px;
+            box-shadow:0 12px 48px rgba(0,0,0,.7);border:1px solid #334155;
+            flex-direction:column;overflow:hidden">
+    <div style="display:flex;align-items:center;padding:11px 14px;
+                border-bottom:1px solid #334155;flex-shrink:0;background:#0f172a">
+        <span style="width:8px;height:8px;background:#22c55e;border-radius:50%;
+                     margin-right:7px;display:inline-block;animation:lf-pulse 1.3s infinite"></span>
+        <span style="color:#f1f5f9;font-weight:700;font-size:13px">Live Orders</span>
+        <button onclick="document.getElementById('lf-popup').style.display='none'"
+                style="margin-left:auto;background:none;border:none;color:#64748b;
+                       font-size:22px;line-height:1;cursor:pointer;padding:0 2px">
+            &times;
+        </button>
+    </div>
+    <iframe src="/live" style="flex:1;border:none;width:100%;height:100%"></iframe>
+</div>
+
+<style>
+@keyframes lf-pulse {
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.4;transform:scale(1.6)}
+}
+</style>
+<!-- END LIVE FEED POPUP -->
 </body>
 </html>
+
