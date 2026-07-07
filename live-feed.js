@@ -141,7 +141,7 @@ function buildWidgetJs() {
   /* ---------- CSS ---------- */
   var style=document.createElement('style');
   style.textContent=
-    '#mrf-live-btn{position:fixed;bottom:24px;right:24px;z-index:99998;'+
+    '#mrf-live-btn{position:fixed;bottom:24px;left:24px;z-index:99998;'+
     'display:flex;align-items:center;gap:7px;background:#16a34a;color:#fff;'+
     'border:none;padding:9px 18px 9px 13px;border-radius:999px;cursor:pointer;'+
     'font-size:13px;font-weight:700;box-shadow:0 4px 18px rgba(0,0,0,.35);'+
@@ -150,7 +150,7 @@ function buildWidgetJs() {
     'animation:mrfpulse 1.3s infinite;}'+
     '@keyframes mrfpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}'+
 
-    '#mrf-live-popup{position:fixed;bottom:75px;right:24px;z-index:99999;'+
+    '#mrf-live-popup{position:fixed;bottom:75px;left:24px;z-index:99999;'+
     'width:355px;max-height:500px;background:#1e293b;border:1px solid #334155;'+
     'border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.55);'+
     'display:none;flex-direction:column;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}'+
@@ -191,10 +191,10 @@ function buildWidgetJs() {
     '.mrf-otptag{background:#14532d;color:#4ade80;font-size:10px;font-weight:700;'+
     'padding:2px 6px;border-radius:4px;white-space:nowrap;}'+
 
-    '.mrf-pr{text-align:right;flex-shrink:0;}'+
-    '.mrf-pramt{font-size:14px;font-weight:700;color:#34d399;}'+
+    '.mrf-pr{text-align:right;flex-shrink:0;min-width:58px;}'+
+    '.mrf-pramt{font-size:13px;font-weight:700;color:#34d399;white-space:nowrap;}'+
     '.mrf-pramt small{font-size:10px;font-weight:400;}'+
-    '.mrf-prago{font-size:10px;color:#475569;margin-top:2px;}'+
+    '.mrf-prago{font-size:10px;color:#94a3b8;margin-top:3px;white-space:nowrap;}'+
 
     '.mrf-empty{text-align:center;padding:30px 10px;color:#475569;font-size:13px;}'+
     '.mrf-pfooter{text-align:center;font-size:11px;color:#334155;padding:7px;flex-shrink:0;border-top:1px solid #1e293b;}';
