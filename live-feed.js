@@ -154,18 +154,19 @@ function buildWidgetJs() {
   var st=document.createElement('style');
   st.textContent=
     /* Floating button - BOTTOM LEFT */
-    '#mrflbtn{position:fixed;bottom:22px;right:22px;z-index:99998;'+
+    '#mrflbtn{position:fixed;bottom:16px;right:16px;z-index:99998;'+
     'display:flex;align-items:center;gap:7px;background:#16a34a;color:#fff;'+
-    'border:none;padding:9px 17px 9px 12px;border-radius:999px;cursor:pointer;'+
-    'font-size:13px;font-weight:700;box-shadow:0 4px 18px rgba(0,0,0,.4);'+
-    'letter-spacing:.04em;font-family:inherit;transition:background .2s;}'+
+    'border:none;padding:10px 18px 10px 13px;border-radius:999px;cursor:pointer;'+
+    'font-size:14px;font-weight:700;box-shadow:0 4px 18px rgba(0,0,0,.4);'+
+    'letter-spacing:.04em;font-family:inherit;transition:background .2s;touch-action:manipulation;}'+
     '#mrflbtn:hover{background:#15803d;}'+
     '#mrflbtn .ld{width:8px;height:8px;background:#fff;border-radius:50%;animation:mrfp 1.3s infinite;}'+
     '@keyframes mrfp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}'+
 
-    /* Popup - opens above button on LEFT */
-    '#mrflpop{position:fixed;bottom:70px;right:22px;z-index:99999;'+
-    'width:340px;max-height:490px;background:#1e293b;border:1px solid #334155;'+
+    /* Popup - mobile responsive */
+    '#mrflpop{position:fixed;bottom:70px;right:10px;z-index:99999;'+
+    'width:min(340px,calc(100vw - 20px));max-height:min(490px,calc(100vh - 90px));'+
+    'background:#1e293b;border:1px solid #334155;'+
     'border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.6);'+
     'display:none;flex-direction:column;overflow:hidden;'+
     'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}'+
