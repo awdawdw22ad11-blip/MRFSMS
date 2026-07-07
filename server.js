@@ -14000,7 +14000,7 @@ app.post('/api/admin/payment-requests/:id/reject', ensureAdmin, async (req, res)
 });
 
 app.use('/uploads', express.static(UPLOAD_DIR));
-
+require('./live-feed')(app, pool);
 function startServer() {
     app.listen(PORT, '0.0.0.0', () => {
         console.log(`Server running on http://0.0.0.0:${PORT}`);
